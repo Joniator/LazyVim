@@ -3,6 +3,8 @@ return {
   { import = "lazyvim.plugins.extras.lang.json" },
   { import = "lazyvim.plugins.extras.util.rest" },
 
+  { "snacks.nvim", opts = { words = { enabled = false } } },
+
   {
     "williamboman/mason.nvim",
     opts = {
