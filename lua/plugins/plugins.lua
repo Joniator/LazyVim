@@ -1,22 +1,7 @@
 return {
-  { 'catppuccin/nvim', },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "catppuccin-macchiato",
-    },
-  },
-
-  {
-    "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-emoji" },
-    ---@param opts cmp.ConfigSchema
-    opts = function(_, opts)
-      table.insert(opts.sources, { name = "emoji" })
-    end,
-  },
-
+  { import = "lazyvim.plugins.extras.coding.mini-surround" },
   { import = "lazyvim.plugins.extras.lang.json" },
+  { import = "lazyvim.plugins.extras.util.rest" },
 
   {
     "williamboman/mason.nvim",
@@ -30,10 +15,11 @@ return {
   },
 
   {
-    'saghen/blink.cmp',
+    "saghen/blink.cmp",
     opts = {
       keymap = {
-        preset = 'default',
-      }
+        preset = "default",
+      },
     },
+  },
 }
